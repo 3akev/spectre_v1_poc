@@ -23,9 +23,7 @@ uint8_t *array2;
 size_t *array1_size;
 
 uint8_t unused[64];
-// wtf? seems certain characters are exfiltrated, others not
 char *secret = "FLAG{spooky_scary_spectres_sends_shivers_down_your_spine}";
-// works : AB
 uint8_t unused2[64];
 uint8_t unused3[64];
 
