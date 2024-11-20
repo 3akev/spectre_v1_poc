@@ -98,7 +98,7 @@ int main() {
 
   printf("array1: %p\n", array1);
   printf("secret_ptr: %p\n", secret);
-  printf("diff; %p\n", (size_t)(secret - (char *)array1));
+  printf("diff: %p\n", (size_t)(secret - (char *)array1));
   printf("initialized. waiting for messages...\n");
   while (1) {
     msg_buffer msg;

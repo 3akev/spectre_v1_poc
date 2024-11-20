@@ -129,7 +129,7 @@ int main(int argc, const char **argv) {
 
   if (argc >= 2) {
     sscanf(argv[1], "%p", (void **)(&malicious_x));
-    printf("Reading at malicious_x = %p\n", (void *)malicious_x);
+    // printf("Reading at malicious_x = %p\n", (void *)malicious_x);
   }
   if (argc >= 3) {
     // malicious_x -= (size_t)array1; /* Convert input value into a pointer */
